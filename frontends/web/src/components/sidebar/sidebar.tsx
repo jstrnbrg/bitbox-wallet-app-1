@@ -16,6 +16,7 @@
 
 import { Component, h, RenderableProps } from 'preact';
 import { Link, Match } from 'preact-router/match';
+import diamond from '../../assets/icons/diamond.svg';
 import ejectIcon from '../../assets/icons/eject.svg';
 import info from '../../assets/icons/info.svg';
 import settings from '../../assets/icons/settings-alt.svg';
@@ -235,8 +236,22 @@ class Sidebar extends Component<Props> {
                         </div>
                     }
                     { accounts && accounts.map(this.getAccountLink) }
+                    
                     <div className="sidebarHeaderContainer end">
-                        <span className="sidebarHeader">{t('sidebar.settings')}</span>
+                        {/*<span className="sidebarHeader">{t('sidebar.settings')}</span>*/}
+                    </div>
+                    <div className="sidebarItem">
+                        <Link
+                            activeClassName="sidebar-active"
+                            href="/exchanges"
+                        >
+                            <div className="single">
+                                <img draggable={false} className="sidebar_settings" src={diamond} alt={t('sidebar.bitboxBase')} />
+                            </div>
+                            <span className="sidebar_label">
+                                {t('sidebar.exchanges')}
+                            </span>
+                        </Link>
                     </div>
                     {debug &&
                         <div className="sidebarItem">
