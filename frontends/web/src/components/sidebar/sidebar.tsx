@@ -245,7 +245,7 @@ class Sidebar extends Component<Props> {
                             href="/exchanges"
                         >
                             <div className="single">
-                                <img draggable={false} className="sidebar_settings" src={diamond} alt={t('sidebar.bitboxBase')} />
+                                <img draggable={false} className="sidebar_settings" src={diamond} alt={t('sidebar.exchanges')} />
                             </div>
                             <span className="sidebar_label">
                                 {t('sidebar.exchanges')}
