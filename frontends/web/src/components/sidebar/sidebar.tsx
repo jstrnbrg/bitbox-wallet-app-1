@@ -236,7 +236,6 @@ class Sidebar extends Component<Props> {
                         </div>
                     }
                     { accounts && accounts.map(this.getAccountLink) }
-                    
                     <div className="sidebarHeaderContainer end">
                         {/*<span className="sidebarHeader">{t('sidebar.settings')}</span>*/}
                     </div>
