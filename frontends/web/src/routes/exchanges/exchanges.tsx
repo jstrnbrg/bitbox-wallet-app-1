@@ -103,7 +103,7 @@ class Exchanges extends Component<Props, State> {
         }
         const results = this.data
             .filter(({ regions }) => !region || regions.includes(region))
-            .filter(({ payment }) => !methods.length || methods.every(m => payment.includes(m)))
+            .filter(({ payment }) => !methods.length || methods.some(m => payment.includes(m)))
             .map(Row);
         return (
             <div className="contentWithGuide">
