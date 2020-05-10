@@ -62,18 +62,16 @@ class Exchanges extends Component<Props, State> {
     private data: Exchange[];
 
     public componentDidMount() {
-        setTimeout(() => {
-            fetch('/assets/exchanges/exchanges.json')
-                .then(res => res.json())
-                .then(data => data.map(({link, ...rest}) => ({
-                    ...rest,
-                    link,
-                    hostname: new URL(link).hostname,
-                })))
-                .then(data => this.data = data)
-                .then(() => this.setState({ status: 'loaded', region: null, methods: [] }))
-                .catch(() => this.setState({ status: 'error' }));
-        }, 400);
+        fetch('/assets/exchanges/exchanges.json')
+            .then(res => res.json())
+            .then(data => data.map(({link, ...rest}) => ({
+                ...rest,
+                link,
+                hostname: new URL(link).hostname,
+            })))
+            .then(data => this.data = data)
+            .then(() => this.setState({ status: 'loaded', region: null, methods: [] }))
+            .catch(() => this.setState({ status: 'error' }));
     }
 
     private toggleRegion = code => {
