@@ -21,6 +21,7 @@ import { SwissMadeOpenSource } from '../../components/icon/logo';
 import { Footer, Header } from '../../components/layout';
 import { Spinner } from '../../components/spinner/Spinner';
 import { translate, TranslateProps } from '../../decorators/translate';
+import i18n from '../../i18n/i18n';
 
 import * as styles from './exchanges.css';
 
@@ -225,7 +226,9 @@ function Row({
                 </div>
             </div>
             <div className={styles.button}>
-                <Button primary>Buy</Button>
+                <Button primary>
+                    {i18n.t('exchanges.buy')}
+                </Button>
             </div>
         </A>
     );
