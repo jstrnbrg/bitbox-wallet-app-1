@@ -1018,7 +1018,7 @@ func (backend *Backend) SystemOpen(url string) error {
 
 	whitelistedPatterns := []string{
 		"^https://shiftcrypto.ch/",
-		"^https://s.shiftcrypto.ch/",
+		"^https://ext.shiftcrypto.ch/",
 		"^https://guides.shiftcrypto.ch/",
 		"^https://shop.shiftcrypto.ch/",
 		"^https://blockstream\\.info/(testnet/)?tx/",

@@ -212,7 +212,7 @@ function Row({
     return (
         <A
             key={key}
-            href={`https://s.shiftcrypto.ch/${key}`}
+            href={`https://ext.shiftcrypto.ch/${key}`}
             title={hostname}
             className={styles.row}
         >
