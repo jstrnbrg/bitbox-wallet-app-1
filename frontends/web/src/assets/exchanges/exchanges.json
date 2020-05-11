@@ -62,7 +62,7 @@
 		"payment": ["SW"]
 	},
 	{
-		"key": "kyperswap",
+		"key": "kyberswap",
 		"link": "https://kyberswap.com/",
 		"description": "KyberSwapis a fast, simple, and secure token swap platform.",
 		"regions": ["EU", "NA", "LA", "APAC", "AF"],
