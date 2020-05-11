@@ -566,24 +566,23 @@
     "confirmTitle": "Confirmation"
   },
   "exchanges": {
-    "title": "Exchanges",
     "buy": "Buy",
-    "regions": {
-      "EU": "Europe",
-      "NA": "North America",
-      "LA": "Latin America",
-      "APAC": "Asia Pacific (incl. AU/NZ)",
-      "AF": "Africa"
-    },
     "methods": {
       "BT": "Bank transfer",
       "CC": "Credit card",
       "DCA": "Bank onramp",
-      "SW": "Crypto swap",
       "P2P": "Peer-to-peer",
-      "?": "Recurring buys"
+      "SW": "Crypto swap"
     },
-    "nomatch": "no exchanges match your criteria"
+    "nomatch": "no exchanges match your criteria",
+    "regions": {
+      "AF": "Africa",
+      "APAC": "Asia Pacific (incl. AU/NZ)",
+      "EU": "Europe",
+      "LA": "Latin America",
+      "NA": "North America"
+    },
+    "title": "Exchanges"
   },
   "fiat": {
     "default": "default",
@@ -1229,10 +1228,10 @@
   "sidebar": {
     "accounts": "Accounts",
     "addAccount": "Add account",
-    "exchanges": "Buy crypto",
     "bitboxBase": "BitBoxBase",
     "bitboxBaseConnect": "Connect BitBoxBase",
     "device": "Manage device",
+    "exchanges": "Buy crypto",
     "leave": "Leave",
     "settings": "Settings"
   },
