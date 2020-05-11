@@ -48,13 +48,6 @@
 		"payment": ["BT"]
 	},
 	{
-		"key": "changelly",
-		"link": "https://changelly.com/",
-		"description": "Changelly, founded in 2015, is a non-custodial instant cryptocurrency exchange, which means that no users’ funds are placing in the service.",
-		"regions": ["EU", "NA", "LA", "APAC", "AF"],
-		"payment": ["SW"]
-	},
-	{
 		"key": "shapeshift",
 		"link": "https://shapeshift.io/",
 		"description": "",
