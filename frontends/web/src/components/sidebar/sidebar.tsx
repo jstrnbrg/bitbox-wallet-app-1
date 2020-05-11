@@ -16,7 +16,7 @@
 
 import { Component, h, RenderableProps } from 'preact';
 import { Link, Match } from 'preact-router/match';
-import diamond from '../../assets/icons/diamond.svg';
+import coins from '../../assets/icons/coins.svg';
 import ejectIcon from '../../assets/icons/eject.svg';
 import info from '../../assets/icons/info.svg';
 import settings from '../../assets/icons/settings-alt.svg';
@@ -245,7 +245,7 @@ class Sidebar extends Component<Props> {
                             href="/exchanges"
                         >
                             <div className="single">
-                                <img draggable={false} className="sidebar_settings" src={diamond} alt={t('sidebar.exchanges')} />
+                                <img draggable={false} className="sidebar_settings" src={coins} alt={t('sidebar.exchanges')} />
                             </div>
                             <span className="sidebar_label">
                                 {t('sidebar.exchanges')}
