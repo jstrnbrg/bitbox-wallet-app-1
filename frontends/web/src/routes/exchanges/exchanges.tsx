@@ -17,13 +17,12 @@
 import { Component, h, RenderableProps } from 'preact';
 import A from '../../components/anchor/anchor';
 import Button from '../../components/forms/button';
-import { Entry } from '../../components/guide/entry';
-import { Guide } from '../../components/guide/guide';
 import { SwissMadeOpenSource } from '../../components/icon/logo';
 import { Footer, Header } from '../../components/layout';
-import { Spinner } from '../../components/spinner/Spinner';
 import { translate, TranslateProps } from '../../decorators/translate';
 import i18n from '../../i18n/i18n';
+
+import { data, ExchangeData, Method, Region } from './exchanges-data';
 
 import * as styles from './exchanges.css';
 
@@ -65,16 +64,18 @@ class Exchanges extends Component<Props, State> {
     private data: Exchange[];
 
     public componentDidMount() {
-        fetch('/assets/exchanges/exchanges.json')
-            .then(res => res.json())
-            .then(data => data.map(({link, ...rest}) => ({
-                ...rest,
-                link,
-                hostname: new URL(link).hostname,
-            })))
-            .then(data => this.data = data)
-            .then(() => this.setState({ status: 'loaded', region: null, methods: [] }))
-            .catch(() => this.setState({ status: 'error' }));
+        setTimeout(() => {
+            fetch('/assets/exchanges/exchanges.json')
+                .then(res => res.json())
+                .then(data => data.map(({link, ...rest}) => ({
+                    ...rest,
+                    link,
+                    hostname: new URL(link).hostname,
+                })))
+                .then(data => this.data = data)
+                .then(() => this.setState({ status: 'loaded', region: null, methods: [] }))
+                .catch(() => this.setState({ status: 'error' }));
+        }, 400);
     }
 
     private toggleRegion = code => {
@@ -106,7 +107,7 @@ class Exchanges extends Component<Props, State> {
         }
         const results = this.data
             .filter(({ regions }) => !region || regions.includes(region))
-            .filter(({ payment }) => !methods.length || methods.some(m => payment.includes(m)))
+            .filter(({ payment }) => !methods.length || methods.every(m => payment.includes(m)))
             .map(Row);
         return (
             <div className="contentWithGuide">
@@ -180,11 +181,6 @@ class Exchanges extends Component<Props, State> {
                         </Footer>
                     </div>
                 </div>
-                <Guide>
-                    <Entry key="exchangeDescription" entry={t('guide.exchanges.description')} />
-                    <Entry key="exchangeWhichService" entry={t('guide.exchanges.whichService')} />
-                    <Entry key="accountTransactionConfirmation" entry={t('guide.exchanges.commission')} />
-                </Guide>
             </div>
         );
     }

@@ -570,7 +570,7 @@
     "methods": {
       "BT": "Bank transfer",
       "CC": "Credit card",
-      "DCA": "Bank onramp",
+      "DCA": "Recurring",
       "P2P": "Peer-to-peer",
       "SW": "Crypto swap"
     },
