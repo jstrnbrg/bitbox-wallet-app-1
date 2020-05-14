@@ -769,6 +769,20 @@
         "title": "I experienced an issue with Safello"
       }
     },
+    "exchanges": {
+      "description": {
+        "text": "This page shows you a selection of our favourite places to buy Bitcoin. At the top of the page you can choose your region and your desired payment methods to narrow down the options. ",
+        "title": "What can I see on this page?"
+      },
+      "whichService": {
+        "text": "That depends on your location and your needs.\nFirst select your region and then choose suitable payment options.\nBank transfer: for larger buy orders.\nCredit Card: for smaller and faster buy orders.\nRecurring: automatically buy coins every week/month.\nCrypto Swap: exchange one cryptocurrency for another.\nPeer to Peer: buy coins more privatly.",
+        "title": "Which service should I use?"
+      },
+      "commission": {
+        "text": "This page uses affiliate links where available. However, not all listed exchanges have an affiliate program and whether an exchange offers one does not influence our decision to list them.",
+        "title": "Do you get a commission when I buy Bitcoin at one of these services?"
+      }
+    },
     "receive": {
       "address": {
         "text": "You can give the address to others to send you some coins. Just make sure you are sending to the correct address.",
