@@ -40,6 +40,7 @@ import { BitBoxBaseConnect, DetectedBitBoxBases } from './routes/bitboxbase/bitb
 import { Devices, DeviceSwitch } from './routes/device/deviceswitch';
 import ManageBackups from './routes/device/manage-backups/manage-backups';
 import { Exchanges } from './routes/exchanges/exchanges';
+import { Guides } from './routes/guides/guides';
 import ElectrumSettings from './routes/settings/electrum';
 import { Settings } from './routes/settings/settings';
 import { apiGet, apiPost } from './utils/request';
@@ -201,6 +202,8 @@ class App extends Component<Props, State> {
                             accounts={accounts} />
                         <Exchanges
                             path="/exchanges" />
+                        <Guides
+                            path="/guides" />
                         <Info
                             path="/account/:code/info"
                             accounts={accounts} />
